@@ -19,6 +19,24 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
+        name="lostfound"
+        options={{
+          title: 'Lost & Found',
+          tabBarIcon: ({color}) => (
+            <IconSymbol size={28} name="magnifyingglass" color={color} />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name="marketplace"
+        options={{
+          title: 'Marketplace',
+          tabBarIcon: ({color}) => (
+            <IconSymbol size={28} name="bag.fill" color={color} />
+          )
+        }}
+      />
+      <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
@@ -28,11 +46,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="notes"
         options={{
-          title: 'Explore',
+          title: 'Notes',
           tabBarIcon: ({color}) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <IconSymbol size={28} name="doc.text.fill" color={color} />
+          )
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({color}) => (
+            <IconSymbol size={28} name="person.fill" color={color} />
           )
         }}
       />
