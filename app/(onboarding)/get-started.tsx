@@ -1,3 +1,4 @@
+import {Image} from 'expo-image';
 import {router} from 'expo-router';
 import React, {useEffect, useMemo, useState} from 'react';
 import {Pressable, Text, View} from 'react-native';
@@ -30,18 +31,14 @@ export default function GetStartedScreen() {
     <View className="flex-1 bg-[#EAF8EF] px-7">
       <View className="flex-1 items-center justify-center">
         <View className="items-center">
-          
-          <View className="w-24 h-24 rounded-3xl bg-white items-center justify-center shadow-sm">
-            <View className="w-14 h-14 rounded-2xl bg-[#EAF8EF] items-center justify-center">
-              <View className="w-6 h-6 rounded-lg bg-green-500" />
-            </View>
-          </View>
+          <Image
+            source={require('../../assets/images/CampusLink_Logo_transparent.png')}
+            contentFit="contain"
+            style={{width: 200, height: 200}}
+          />
 
-          <View className="mt-6 items-center">
-            <Text className="text-4xl font-extrabold text-gray-900">
-              Campus<Text className="text-green-500">Link</Text>
-            </Text>
-            <Text className="mt-3 text-center text-gray-600 font-semibold">
+          <View className="items-center">
+            <Text className="mt-3 text-center text-gray-600 font-semibold text-xl">
               One app, 10+ campuses, one{`\n`}community
             </Text>
 

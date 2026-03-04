@@ -32,26 +32,18 @@ export default function LoginScreen() {
     <View className="flex-1 bg-white px-7">
       <View className="flex-1 justify-center">
         <View className="items-center">
-          <View className="w-24 h-24 rounded-3xl bg-green-100 items-center justify-center">
-            <Image
-              source={require('../../assets/images/CampusLink_Logo_transparent.png')}
-              contentFit="contain"
-              style={{width: 56, height: 56}}
-            />
-          </View>
-          <Text className="mt-4 text-gray-900 font-extrabold text-lg">
-            CampusLink
-          </Text>
+          <Image
+            source={require('../../assets/images/CampusLink_Logo_transparent.png')}
+            contentFit="contain"
+            style={{width: 150, height: 150}}
+          />
         </View>
 
-        <Text className="mt-10 text-4xl font-extrabold text-gray-900">
-          Welcome Back
-        </Text>
         <Text className="mt-3 text-gray-500">
           Sign in to stay connected with your{`\n`}campus
         </Text>
 
-        <View className="mt-10">
+        <View className="mt-5">
           <Text className="text-xs font-bold text-gray-700 mb-2">
             University Email
           </Text>
@@ -108,7 +100,7 @@ export default function LoginScreen() {
             </Text>
           </Pressable>
           <View className="mt-8 flex-row justify-center">
-            <Text className="text-gray-400">Don't have an account? </Text>
+            <Text className="text-gray-400">Don{"'"}t have an account? </Text>
             <Link href="/(auth)/register" asChild>
               <Pressable>
                 <Text className="text-green-600 font-semibold">Sign Up</Text>
