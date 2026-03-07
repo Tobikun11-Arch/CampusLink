@@ -52,5 +52,5 @@ export async function verify(input: {email: string; code: string}) {
 
 export async function login(input: {email: string; password: string}) {
   const res = await apiClient.post('/api/auth/login', input);
-  return res.data as {accessToken: string};
+  return res.data as {accessToken: string; refreshToken: string};
 }

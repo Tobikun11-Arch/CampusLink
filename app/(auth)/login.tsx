@@ -9,7 +9,7 @@ import {login} from '../../src/features/auth/api/auth.api';
 import {useAuthStore} from '../../src/shared/stores/auth.store';
 
 export default function LoginScreen() {
-  const setAccessToken = useAuthStore(s => s.setAccessToken);
+  const setTokens = useAuthStore(s => s.setTokens);
   const tabsHref = '/(tabs)' as any;
 
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ export default function LoginScreen() {
   const mutation = useMutation({
     mutationFn: login,
     onSuccess: async data => {
-      await setAccessToken(data.accessToken);
+      await setTokens(data.accessToken, data.refreshToken);
       router.replace(tabsHref);
     },
     onError: (e: any) => {
